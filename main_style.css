@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  position: relative;
+  font-family: "Microsoft JhengHei",
+    "Roboto",
+    sans-serif,
+    serif;
+}
+
+.header {
+  position: relative;
+  border: 1px solid #000;
+}
+
+
+
+
+
+
+.footer {
+  border: 1px solid #000;
+}
