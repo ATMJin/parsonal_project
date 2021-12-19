@@ -1,0 +1,89 @@
+section {
+  /* position: relative; */
+  padding: 40px 80px;
+}
+
+/* ----------------------------------------- */
+/* 以下課程介紹 */
+.introduce_of_course {
+  background-color: #84bae6;
+}
+
+.introduce_of_course>h2 {
+  margin-bottom: 40px;
+}
+
+.course_image {}
+
+.course_image_01 {
+  display: block;
+  width: 900px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin: 0 auto;
+}
+
+/* 輪播列左右按鈕 */
+.course_image::before {
+  content: " <";
+  display: block;
+  font-size: 5.5rem;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 30%;
+  left: 1%;
+  border-radius: 50%;
+  color: #0007;
+  background-color: #fff7;
+}
+
+.course_introduce_words {
+  width: 89%;
+  border-radius: 1.5rem;
+  padding: 20px 75px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 2.25rem;
+  text-align: center;
+  background-color: #fff8;
+}
+
+
+
+.course_introduce_words_paragraph {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  text-align: left;
+  line-height: 1.5em;
+  text-indent: 1em;
+  letter-spacing: 1px;
+  background-image: linear-gradient(#fff0 93%, #0004 93%);
+  background-size: 100% 1.5em;
+}
+
+
+
+.change_backgraound {
+  height: 50px;
+  background-image: linear-gradient(#84bae6, #6EADDF, #4F96D8);
+}
+
+/* 以上課程介紹 */
+/* ----------------------------------------- */
+/* 以下作品一覽 */
+.introduce_of_masterpiece {
+  background-color: #4F96D8;
+}
+
+
+/* 以上作品一覽 */
+/* ----------------------------------------- */
+/* 以下技法介紹 */
+
+
+
+/* 以上技法介紹 */
+/* ----------------------------------------- */
