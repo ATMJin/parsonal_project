@@ -1,12 +1,19 @@
 section {
   /* position: relative; */
   padding: 40px 80px;
+  padding-bottom: 20px;
+}
+
+:root {
+  --upper_petal: path('M 50,136.6 L 0,50 A 50,50 0,0,1 100,50 L 50,136.6 z');
+  --down_petal: path('M 50,0 L 0,86.6 A 50,50 0,0,0 100,86.6 L 50,0 z');
 }
 
 /* ----------------------------------------- */
 /* 以下課程介紹 */
 .introduce_of_course {
   background-color: #84bae6;
+  position: relative;
 }
 
 .introduce_of_course>h2 {
@@ -43,13 +50,12 @@ section {
   border-radius: 1.5rem;
   padding: 20px 75px;
   padding-bottom: 30px;
-  margin: 0 auto;
+  margin: 10px auto;
   margin-top: 20px;
   font-size: 2.25rem;
   text-align: center;
   background-color: #fff8;
 }
-
 
 
 .course_introduce_words_paragraph {
@@ -64,14 +70,24 @@ section {
   background-size: 100% 1.5em;
 }
 
+.more {
+  color: #fed857;
+  font-size: 1.5rem;
+  text-align: right;
+}
 
+.more>a:visited {
+  color: #fed857;
 
-.change_backgraound {
+}
+
+/* 以上課程介紹 */
+/* ----------------------------------------- */
+.change_backgraound_front {
   height: 50px;
   background-image: linear-gradient(#84bae6, #6EADDF, #4F96D8);
 }
 
-/* 以上課程介紹 */
 /* ----------------------------------------- */
 /* 以下作品一覽 */
 .introduce_of_masterpiece {
@@ -79,11 +95,147 @@ section {
 }
 
 
+
+
+
+
+
 /* 以上作品一覽 */
 /* ----------------------------------------- */
-/* 以下技法介紹 */
+.change_backgraound_back {
+  height: 50px;
+  background-image: linear-gradient(#4F96D8, #357ECD, #1C68C0);
+}
 
+/* ----------------------------------------- */
+/* 以下技法介紹 */
+.introduce_of_skill {
+  background-color: #1c68c0;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 0px #000
+}
+
+
+
+.skill_pic_and_intro_and_roulette {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  column-gap: 4rem;
+  row-gap: 1.5rem;
+
+}
+
+.skill_roulette {
+  grid-column: 1;
+  grid-row: 1;
+  /* height: 100px;
+  width: 100px; */
+  /* border-radius: 50%;
+  border: 1px solid #000; */
+}
+
+/* 花瓣輪盤 */
+/* !import!  之後RWD要大修 */
+.flower_roulette {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  /* border: 1px solid #000; */
+  font-size: 0;
+  height: 300px;
+  aspect-ratio: 1/1;
+  margin: auto;
+}
+
+.flower_roulette>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flower_roulette>img:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  clip-path: var(--upper_petal);
+  transform: translate(83px) rotate(-60deg);
+  transform-origin: center 136.6px;
+
+}
+
+.flower_roulette>img:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  clip-path: var(--upper_petal);
+}
+
+.flower_roulette>img:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+  clip-path: var(--upper_petal);
+  transform: translate(-83px) rotate(60deg);
+  transform-origin: center 136.6px;
+
+}
+
+
+.flower_roulette>img:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2;
+  clip-path: var(--down_petal);
+  transform: translate(83px) rotate(60deg);
+  transform-origin: top center;
+}
+
+.flower_roulette>img:nth-child(5) {
+  grid-column: 2;
+  grid-row: 2;
+  clip-path: var(--down_petal);
+}
+
+.flower_roulette>img:nth-child(6) {
+  grid-column: 3;
+  grid-row: 2;
+  clip-path: var(--down_petal);
+  transform: translate(-83px) rotate(-60deg);
+  transform-origin: top center;
+
+}
+
+/* --------- */
+.skill_intro {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #fff4;
+  border-radius: 1em;
+  padding: 40px;
+}
+
+.skill_intro h3 {
+  font-size: 2rem;
+}
+
+.skill_intro p {
+  font-size: 1.5rem;
+  line-height: 1.25em;
+  margin-top: 20px;
+}
+
+.skill_pic {
+  grid-column: 2;
+  grid-row: 1/3;
+}
+
+.skill_pic img {
+  width: 50vw;
+  border-radius: 1em;
+  /* clip-path: path('M 100,273 L 0,100 A 100,100 0,0,1 200,100 L 100,273 z'); */
+
+}
 
 
 /* 以上技法介紹 */
 /* ----------------------------------------- */
+.cover_under_page {
+  background-color: #1c68c0;
+}
