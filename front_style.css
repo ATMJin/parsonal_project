@@ -5,11 +5,12 @@ section {
 }
 
 :root {
+  /* 寬100高150 */
   --upper_petal: path('M 50,136.6 L 0,50 A 50,50 0,0,1 100,50 L 50,136.6 z');
   --down_petal: path('M 50,0 L 0,86.6 A 50,50 0,0,0 100,86.6 L 50,0 z');
 }
 
-/* ----------------------------------------- */
+/* ========================================= */
 /* 以下課程介紹 */
 .introduce_of_course {
   background-color: #84bae6;
@@ -82,16 +83,124 @@ section {
 }
 
 /* 以上課程介紹 */
-/* ----------------------------------------- */
+/* ========================================= */
 .change_backgraound_front {
   height: 50px;
   background-image: linear-gradient(#84bae6, #6EADDF, #4F96D8);
 }
 
-/* ----------------------------------------- */
+/* ========================================= */
 /* 以下作品一覽 */
 .introduce_of_masterpiece {
   background-color: #4F96D8;
+}
+
+/* 大花輪播 */
+/* FIXME: 大花輪播，之後RWD要大修 */
+.big_flower {
+  height: 600px;
+  width: 600px;
+  margin: auto;
+  display: grid;
+  grid-template: repeat(5, auto)/repeat(5, auto);
+}
+
+.big_flower>img:not(.circle_in_flower) {
+  width: 100px;
+  /*! height: 100px; */
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.big_flower>img:nth-child(even) {
+  aspect-ratio: 1/1;
+  width: 150px;
+}
+
+.big_flower>img:nth-child(4n+1) {
+  aspect-ratio: 3/2;
+  width: 150px;
+}
+
+.big_flower>img:first-child {
+  grid-column: 2/5;
+  grid-row: 2/5;
+  width: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+/* .circle_in_flower {
+  grid-column: 2/5;
+  grid-row: 2/5;
+  width: 300px;
+  aspect-ratio: 1/1 !important;
+  border-radius: 50%;
+} */
+
+.big_flower_petal_top_left {
+  grid-column: 1;
+  grid-row: 1;
+  clip-path: var(--upper_petal);
+  transform:translate(130px,50px) rotate(-45deg);
+  transform-origin: 50px 136.6px;
+
+  /* aspect-ratio: 2/3; */
+  /* width: 100px; */
+  /* object-fit: cover; */
+}
+
+.big_flower_petal_top {
+  grid-column: 3;
+  grid-row: 1;
+  clip-path: var(--upper_petal);
+
+}
+
+.big_flower_petal_top_right {
+  grid-column: 5;
+  grid-row: 1;
+  clip-path: var(--upper_petal);
+  transform:translate(-80px,43px) rotate(45deg);
+  transform-origin: 50px 136.6px;
+}
+
+.big_flower_petal_right {
+  grid-column: 5;
+  grid-row: 3;
+  clip-path: path('M 0,50 L 86.6,0 A 50,50 0,0,1 86.6,100 L 0,50 z');
+  transform: translate(15px)
+
+}
+
+.big_flower_petal_bottom_right {
+  grid-column: 5;
+  grid-row: 5;
+  clip-path: var(--down_petal);
+  transform:translate(-84px,-30px) rotate(-45deg);
+  transform-origin: 50px top;
+
+}
+
+.big_flower_petal_bottom {
+  grid-column: 3;
+  grid-row: 5;
+  clip-path: var(--down_petal);
+transform: translate(0,15px)
+}
+
+.big_flower_petal_bottom_left {
+  grid-column: 1;
+  grid-row: 5;
+  clip-path: var(--down_petal);
+  transform:translate(130px,-30px) rotate(45deg);
+  transform-origin: 50px top;
+}
+
+.big_flower_petal_left {
+  grid-column: 1;
+  grid-row: 3;
+  clip-path: path('M 136.6,50 L 50,100 A 50,50 0,0,1 50,0 L 136.6,50 z');
 }
 
 
@@ -101,13 +210,13 @@ section {
 
 
 /* 以上作品一覽 */
-/* ----------------------------------------- */
+/* ========================================= */
 .change_backgraound_back {
   height: 50px;
   background-image: linear-gradient(#4F96D8, #357ECD, #1C68C0);
 }
 
-/* ----------------------------------------- */
+/* ========================================= */
 /* 以下技法介紹 */
 .introduce_of_skill {
   background-color: #1c68c0;
@@ -136,7 +245,7 @@ section {
 }
 
 /* 花瓣輪盤 */
-/* !import!  之後RWD要大修 */
+/* FIXME: 花瓣輪盤，之後RWD要大修 */
 .flower_roulette {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -235,7 +344,7 @@ section {
 
 
 /* 以上技法介紹 */
-/* ----------------------------------------- */
+/* ========================================= */
 .cover_under_page {
   background-color: #1c68c0;
 }
