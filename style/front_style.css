@@ -30,34 +30,27 @@ section {
 }
 
 /* 輪播列左右按鈕 */
-/* TODO: 之後要改成botton */
-.course_image::before {
-  content: " <";
-  display: block;
-  font-size: 5.5rem;
-  width: 100px;
-  height: 100px;
+.btn {
   position: absolute;
   top: 30%;
-  left: 1%;
+  width: 100px;
+  height: 100px;
+  font-size: 5.5rem;
+  border: 0;
   border-radius: 50%;
   color: #0007;
   background-color: #fff7;
 }
 
-.course_image::after {
-  content: ">";
-  display: block;
-  font-size: 5.5rem;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 30%;
-  left: 90%;
-  border-radius: 50%;
-  color: #0007;
-  background-color: #fff7;
+.btn:first-of-type {
+  left: 1%;
 }
+
+.btn:last-of-type {
+  left: 90%;
+}
+
+
 
 .course_introduce_words {
   width: 89%;
@@ -80,7 +73,7 @@ section {
   line-height: 1.5em;
   text-indent: 1em;
   letter-spacing: 1px;
-  background-image: linear-gradient(#fff0 93%, #0004 93%);
+  background-image: linear-gradient(#fff0 96%, #0003 96%);
   background-size: 100% 1.5em;
 }
 
@@ -88,6 +81,7 @@ section {
   color: #fed857;
   font-size: 1.5rem;
   text-align: right;
+  text-shadow: 1px 1px darkblue;
 }
 
 .more>a:visited {
