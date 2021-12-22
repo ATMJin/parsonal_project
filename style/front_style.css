@@ -1,6 +1,6 @@
 section {
   /* position: relative; */
-  padding: 40px 80px;
+  padding: 40px 4.6875vw;
   padding-bottom: 20px;
 }
 
@@ -21,18 +21,23 @@ section {
   margin-bottom: 40px;
 }
 
+.course_image_with_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course_image {
+  width: 70vw;
+}
+
 .course_image_01 {
-  display: block;
-  width: 900px;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  margin: 0 auto;
+  width: 100%;
+
 }
 
 /* 輪播列左右按鈕 */
 .btn {
-  position: absolute;
-  top: 30%;
   width: 100px;
   height: 100px;
   font-size: 5.5rem;
@@ -40,17 +45,18 @@ section {
   border-radius: 50%;
   color: #0007;
   background-color: #fff7;
+  font-family: "fontawesome";
 }
 
-.btn:first-of-type {
-  left: 1%;
+.btn:first-of-type>i {
+  position: relative;
+  left: -5px;
 }
 
-.btn:last-of-type {
-  left: 90%;
+.btn:last-of-type>i {
+  position: relative;
+  left: 5px;
 }
-
-
 
 .course_introduce_words {
   width: 89%;
