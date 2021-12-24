@@ -105,7 +105,40 @@ section {
 /* ========================================= */
 /* 以下作品一覽 */
 .introduce_of_masterpiece {
+  position: relative;
+  overflow: hidden;
   background-color: #4F96D8;
+}
+
+/* 小花背景裝飾 */
+.background_flower {
+  position: absolute;
+  /*   border: 1px solid black; */
+  width: 25vw;
+  height: 25vw;
+  top: 20px;
+  right: 0;
+  background-image: radial-gradient(#Fff2 10%, #0000 20%),
+    radial-gradient(ellipse 40% 80%, #fff4 20%, #0000 20%),
+    radial-gradient(ellipse 80% 40%, #fff4 20%, #0000 20%),
+    radial-gradient(ellipse 40% 80%, #fff4 20%, #0000 20%),
+    radial-gradient(ellipse 80% 40%, #fff4 20%, #0000 20%);
+  /*     background-size: 200px 200px; */
+  background-position: 0 0,
+    0 calc(25vw * 0.30),
+    calc(25vw * 0.30) 0,
+    0 calc(-25vw * 0.30),
+    calc(-25vw * 0.30) 0;
+  background-repeat: no-repeat;
+}
+
+.bgf2 {
+  transform: rotate(45deg);
+}
+
+.lb_flower {
+  top: 50%;
+  left:30px;
 }
 
 /* 大花輪播 */
