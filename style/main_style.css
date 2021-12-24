@@ -43,6 +43,7 @@ a:visited {
 
 .h1 {
   position: absolute;
+  z-index: -1;
   color: #ccc;
   opacity: 1%;
 }
@@ -61,6 +62,7 @@ a:visited {
 }
 
 .nav_h2 {
+  z-index: -1;
   position: absolute;
   color: #ccc;
   opacity: 1%;
