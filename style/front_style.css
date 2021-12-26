@@ -5,9 +5,21 @@ section {
 }
 
 :root {
-  /* 寬100高150 */
+  /* 花瓣路徑，寬100高150 */
   --upper_petal: path('M 50,136.6 L 0,50 A 50,50 0,0,1 100,50 L 50,136.6 z');
   --down_petal: path('M 50,0 L 0,86.6 A 50,50 0,0,0 100,86.6 L 50,0 z');
+}
+
+h2 {
+  letter-spacing: .1em;
+}
+
+h3 {
+  letter-spacing: .1em;
+}
+
+p {
+  letter-spacing: .2em;
 }
 
 /* ========================================= */
@@ -30,7 +42,7 @@ section {
 }
 
 .course_image {
-  width: 70vw;
+  width: 60vw;
 }
 
 /* 佔位用圖片 */
@@ -93,7 +105,7 @@ section {
 
 .course_introduce_words {
   width: 89%;
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
   padding: 20px 75px;
   padding-bottom: 30px;
   margin: 10px auto;
@@ -112,7 +124,7 @@ section {
   line-height: 1.5em;
   text-indent: 1em;
   letter-spacing: 1px;
-  background-image: linear-gradient(#fff0 96%, #0003 96%);
+  background-image: linear-gradient(#fff0 96%, #0002 97%);
   background-size: 100% 1.5em;
 }
 
@@ -361,7 +373,6 @@ section {
 
 }
 
-
 .flower_roulette>img:nth-child(4) {
   grid-column: 1;
   grid-row: 2;
@@ -390,7 +401,7 @@ section {
   grid-column: 1;
   grid-row: 2;
   background-color: #fff4;
-  border-radius: 1em;
+  border-radius: 0.75rem;
   padding: 40px;
 }
 
@@ -400,7 +411,7 @@ section {
 
 .skill_intro p {
   font-size: 1.5rem;
-  line-height: 1.25em;
+  line-height: 1.5em;
   margin-top: 20px;
 }
 
@@ -420,5 +431,5 @@ section {
 /* 以上技法介紹 */
 /* ========================================= */
 .cover_under_page {
-  background-color: #1c68c0;
+  background-color: var(--skill_color);
 }
