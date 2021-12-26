@@ -25,6 +25,18 @@ p {
   letter-spacing: .2em;
 }
 
+.more {
+  color: #fed857;
+  font-size: 1.5rem;
+  text-align: right;
+  margin-top: 20px;
+  text-shadow: 1px 1px darkblue;
+}
+
+.more>a:visited {
+  color: #fed857;
+}
+
 /* ========================================= */
 /* 以下課程介紹 */
 .introduce_of_course {
@@ -131,18 +143,6 @@ p {
   background-size: 100% 1.5em;
 }
 
-.more {
-  color: #fed857;
-  font-size: 1.5rem;
-  text-align: right;
-  margin-top: 20px;
-  text-shadow: 1px 1px darkblue;
-}
-
-.more>a:visited {
-  color: #fed857;
-
-}
 
 /* 以上課程介紹 */
 /* ========================================= */
@@ -381,6 +381,8 @@ p {
 .skill_roulette {
   grid-column: 1;
   grid-row: 1;
+  display: flex;
+  align-items: center;
   /* height: 100px;
   width: 100px; */
   /* border-radius: 50%;
@@ -526,9 +528,53 @@ p {
 
 }
 
-
 /* 以上技法介紹 */
 /* ========================================= */
 .cover_under_page {
   background-color: var(--skill_color);
+}
+
+.cover_line_message {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(../img/LINE_APP_Android.png);
+  opacity: 1;
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+}
+
+.cover_line_message::after {
+  content: "歡迎聯絡";
+  display: block;
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 105px;
+  right: 80px;
+  background-color: #fff4;
+  /* border: 1px solid #000; */
+}
+
+.line_message {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.go_to_top {
+  background-color: #fff;
+  opacity: 0.5;
+  font-family: "fontawesome";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
