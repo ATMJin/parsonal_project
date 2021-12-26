@@ -15,6 +15,7 @@ section {
 .introduce_of_course {
   background-color: #84bae6;
   position: relative;
+  overflow: hidden;
 }
 
 .introduce_of_course>h2 {
@@ -25,16 +26,48 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .course_image {
   width: 70vw;
 }
 
-.course_image_01 {
+/* 佔位用圖片 */
+.course_image.nothing>.nothing {
   width: 100%;
-
+  opacity: 0;
 }
+
+/* 輪播的圖片 */
+.course_image.carousel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 1000ms;
+}
+
+/* 待輪播的圖片 */
+.course_image.carousel.hidden {
+  opacity: 0;
+}
+
+.course_image.carousel.hidden.hidden_left {
+  opacity: 0;
+  left: -2000px;
+}
+
+.course_image.carousel.hidden.hidden_right {
+  opacity: 0;
+  left: 2000px;
+}
+
+.course_image.carousel>img {
+  width: 100%;
+}
+
 
 /* 輪播列左右按鈕 */
 .btn {
