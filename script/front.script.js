@@ -1,3 +1,6 @@
+let next_pic_num = setInterval(next_pic, 5000)
+window.addEventListener("load", init, false);
+
 function pre_pic() {
   console.log("error")
   let pic01 = document.querySelector(".course_image.show");
@@ -26,8 +29,9 @@ function pre_pic() {
   paragraph02.classList.remove("hidden");
   paragraph02.classList.remove("hidden_left");
   paragraph02.classList.add("show");
+  clearInterval(next_pic_num);
+  next_pic_num = setInterval(next_pic, 5000);
 }
-
 
 function next_pic() {
   let pic01 = document.querySelector(".course_image.show");
@@ -55,6 +59,8 @@ function next_pic() {
   paragraph03.classList.remove("hidden");
   paragraph03.classList.remove("hidden_right");
   paragraph03.classList.add("show");
+  clearInterval(next_pic_num);
+  next_pic_num = setInterval(next_pic, 5000);
 }
 
 function change_flower(e) {
@@ -79,7 +85,3 @@ function init() {
     small_flower_petal[i].addEventListener("click", change_small_flower, false);
   }
 }
-
-
-window.addEventListener("load", init, false);
-// setInterval(next_pic, 5000)
