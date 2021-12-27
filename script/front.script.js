@@ -1,4 +1,5 @@
-let next_pic_num = setInterval(next_pic, 5000)
+let next_pic_num = setInterval(next_pic, 5000);
+setInterval(change_small_flower_timer, 5000)
 window.addEventListener("load", init, false);
 
 function pre_pic() {
@@ -68,20 +69,64 @@ function change_flower(e) {
   big_flower.src = e.target.src
 }
 
+// 小花輪播
+// 滑鼠移動換圖
 function change_small_flower(e) {
   let skill_pic = document.querySelector(".skill_pic>img");
-  skill_pic.src = e.target.src
+  skill_pic.src = e.target.src;
+
+  let darker = document.querySelectorAll("img[class^='roulette_']");
+  for (let i = 0; i < darker.length; i++) {
+    darker[i].classList.remove("lighter");
+  }
+  e.target.classList.add("lighter");
+}
+// 時間輪播
+function change_small_flower_timer() {
+  let flower = document.querySelectorAll("img[class^='roulette_']");
+  let big_flower = document.querySelector(".skill_pic>img")
+  for (let i = 0; i < flower.length; i++) {
+    if (big_flower.src == flower[i].src) {
+      if (i == 5) {
+        big_flower.src = flower[0].src;
+        flower[5].classList.remove("lighter");
+        flower[0].classList.add("lighter");
+        break;
+      } else {
+        big_flower.src = flower[i + 1].src;
+        flower[i].classList.remove("lighter");
+        flower[i + 1].classList.add("lighter");
+        break;
+      }
+    }
+  }
 }
 
+
+
+
+
+
+
+
+
 function init() {
+  // 輪播按鈕
   document.getElementsByClassName("pre_pic")[0].addEventListener("click", pre_pic, false);
   document.getElementsByClassName("next_pic")[0].addEventListener("click", next_pic, false);
+  // 大花輪播
   let big_flower_petal = document.getElementsByClassName("big_flower_petal")
   for (let i = 0; i < big_flower_petal.length; i++) {
     big_flower_petal[i].addEventListener("click", change_flower, false);
+    big_flower_petal[i].addEventListener("mouseover", change_flower, false);
   }
+  // 小花輪播
   let small_flower_petal = document.querySelectorAll("img[class^='roulette_']")
   for (let i = 0; i < small_flower_petal.length; i++) {
     small_flower_petal[i].addEventListener("click", change_small_flower, false);
+    small_flower_petal[i].addEventListener("mouseover", change_small_flower, false);
   }
+
+
+
 }
