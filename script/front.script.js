@@ -82,4 +82,4 @@ function init() {
 
 
 window.addEventListener("load", init, false);
-setInterval(next_pic, 5000)
+// setInterval(next_pic, 5000)
