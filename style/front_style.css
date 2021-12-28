@@ -228,6 +228,11 @@ p {
   /*! height: 100px; */
   aspect-ratio: 2/3;
   object-fit: cover;
+  filter: brightness(40%);
+}
+
+.big_flower>img:not(.circle_in_flower).lighter {
+  filter: brightness(100%);
 }
 
 .big_flower>img:nth-child(even) {
