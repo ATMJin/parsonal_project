@@ -1,8 +1,7 @@
-const timer = 500
-let next_pic_num = setInterval(next_pic, 5000);
+const timer = 5000;
+let next_pic_num = setInterval(next_pic, timer);
 let change_small_flower_timer_num = setInterval(change_small_flower_timer, timer)
 let change_big_flower_timer_num = setInterval(change_big_flower_timer, timer)
-window.addEventListener("load", init, false);
 
 // 課程輪播
 // 往右
@@ -34,7 +33,7 @@ function pre_pic() {
   paragraph02.classList.remove("hidden_left");
   paragraph02.classList.add("show");
   clearInterval(next_pic_num);
-  next_pic_num = setInterval(next_pic, 5000);
+  next_pic_num = setInterval(next_pic, timer);
 }
 // 往左
 function next_pic() {
@@ -64,7 +63,7 @@ function next_pic() {
   paragraph03.classList.remove("hidden_right");
   paragraph03.classList.add("show");
   clearInterval(next_pic_num);
-  next_pic_num = setInterval(next_pic, 5000);
+  next_pic_num = setInterval(next_pic, timer);
 }
 
 // 大花輪播
@@ -101,13 +100,13 @@ function change_big_flower_timer() {
   }
 }
 // mouseover時停止計時
-function stop_change_big_flower_timer() {
-  clearInterval(change_big_flower_timer_num)
-}
-// mouseout時重新計時
-function start_change_big_flower_timer() {
-  change_big_flower_timer_num = setInterval(change_big_flower_timer, timer)
-}
+// function stop_change_big_flower_timer() {
+//   clearInterval(change_big_flower_timer_num)
+// }
+// // mouseout時重新計時
+// function start_change_big_flower_timer() {
+//   change_big_flower_timer_num = setInterval(change_big_flower_timer, timer)
+// }
 
 // 小花輪播
 // 滑鼠移動換圖
@@ -142,13 +141,13 @@ function change_small_flower_timer() {
   }
 }
 // mouseover時停止計時
-function stop_change_small_flower_timer() {
-  clearInterval(change_small_flower_timer_num)
-}
+// function stop_change_small_flower_timer() {
+//   clearInterval(change_small_flower_timer_num)
+// }
 // mouseout時重新計時
-function start_change_small_flower_timer() {
-  change_small_flower_timer_num = setInterval(change_small_flower_timer, timer)
-}
+// function start_change_small_flower_timer() {
+//   change_small_flower_timer_num = setInterval(change_small_flower_timer, timer)
+// }
 
 
 
@@ -156,7 +155,32 @@ function start_change_small_flower_timer() {
 
 
 
-function init() {
+// function init() {
+//   // 輪播按鈕
+//   document.getElementsByClassName("pre_pic")[0].addEventListener("click", pre_pic, false);
+//   document.getElementsByClassName("next_pic")[0].addEventListener("click", next_pic, false);
+//   // 大花輪播
+//   let big_flower_petal = document.getElementsByClassName("big_flower_petal")
+//   for (let i = 0; i < big_flower_petal.length; i++) {
+//     big_flower_petal[i].addEventListener("click", change_flower, false);
+//     big_flower_petal[i].addEventListener("mouseover", change_flower, false);
+//     big_flower_petal[i].addEventListener("mouseover", stop_change_big_flower_timer, false);
+//     big_flower_petal[i].addEventListener("mouseout", start_change_big_flower_timer, false);
+//   }
+//   // 小花輪播
+//   let small_flower_petal = document.querySelectorAll("img[class^='roulette_']")
+//   for (let i = 0; i < small_flower_petal.length; i++) {
+//     small_flower_petal[i].addEventListener("click", change_small_flower, false);
+//     small_flower_petal[i].addEventListener("mouseover", change_small_flower, false);
+//     small_flower_petal[i].addEventListener("mouseover", stop_change_small_flower_timer, false);
+//     small_flower_petal[i].addEventListener("mouseout", start_change_small_flower_timer, false);
+//   }
+
+// }
+
+
+
+window.addEventListener("load", function () {
   // 輪播按鈕
   document.getElementsByClassName("pre_pic")[0].addEventListener("click", pre_pic, false);
   document.getElementsByClassName("next_pic")[0].addEventListener("click", next_pic, false);
@@ -165,18 +189,23 @@ function init() {
   for (let i = 0; i < big_flower_petal.length; i++) {
     big_flower_petal[i].addEventListener("click", change_flower, false);
     big_flower_petal[i].addEventListener("mouseover", change_flower, false);
-    big_flower_petal[i].addEventListener("mouseover", stop_change_big_flower_timer, false);
-    big_flower_petal[i].addEventListener("mouseout", start_change_big_flower_timer, false);
+    big_flower_petal[i].addEventListener("mouseover", function () { //mouseover時停止計時
+      clearInterval(change_big_flower_timer_num);
+    }, false);
+    big_flower_petal[i].addEventListener("mouseout", function () { // mouseout時重新計時
+      change_big_flower_timer_num = setInterval(change_big_flower_timer, timer);
+    }, false);
   }
   // 小花輪播
   let small_flower_petal = document.querySelectorAll("img[class^='roulette_']")
   for (let i = 0; i < small_flower_petal.length; i++) {
     small_flower_petal[i].addEventListener("click", change_small_flower, false);
     small_flower_petal[i].addEventListener("mouseover", change_small_flower, false);
-    small_flower_petal[i].addEventListener("mouseover", stop_change_small_flower_timer, false);
-    small_flower_petal[i].addEventListener("mouseout", start_change_small_flower_timer, false);
+    small_flower_petal[i].addEventListener("mouseover", function () { //mouseover時停止計時
+      clearInterval(change_small_flower_timer_num);
+    }, false);
+    small_flower_petal[i].addEventListener("mouseout", function () { // mouseout時重新計時
+      change_small_flower_timer_num = setInterval(change_small_flower_timer, timer)
+    }, false);
   }
-
-
-
-}
+}, false);
