@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  font-size: 2rem;
 }
 
 :root {
@@ -8,6 +7,7 @@
   --masterpiece_color: #4F96D8;
   --skill_color: #357ECD;
   --main_padding_LR: 4.6875vw;
+  font-size: 16px;
 }
 
 body {
@@ -16,9 +16,9 @@ body {
     "Roboto",
     sans-serif,
     serif;
-  font-size: 16px;
   font-weight: 500;
   color: #1c1c1c;
+  font-size: 1.25rem;
 }
 
 a {
@@ -32,8 +32,10 @@ a:visited {
 /* 以下header */
 /* ----------------------------------- */
 
+
+
+
 .top_of_page {
-  /* position: relative; */
   display: flex;
   justify-content: space-between;
   padding-right: 4.6875vw;
@@ -43,9 +45,8 @@ a:visited {
 
 .h1 {
   position: absolute;
-  z-index: -1;
+  z-index: -100;
   color: #ccc;
-  opacity: 1%;
 }
 
 .link_of_logo {
@@ -87,8 +88,8 @@ a:visited {
 }
 
 .other_page>li {
-  font-size: 2rem;
-  margin: 0 3.125vw;
+  font-size: 1.5rem;
+  margin: 0 0vw;
 }
 
 .other_page>li:first-of-type {
@@ -102,13 +103,25 @@ a:visited {
 .other_page>span {
   display: inline;
   vertical-align: text-bottom;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .other_page>li>a {
   padding: 5px 20px;
 }
 
+@media screen and (min-width:367px) {
+  .other_page>li {
+    font-size: 2rem;
+    margin: 0 3.125vw;
+  }
+
+  .other_page>span {
+    display: inline;
+    vertical-align: text-bottom;
+    font-size: 2rem;
+  }
+}
 
 /*       以上header */
 /* ------------------------------------ */
