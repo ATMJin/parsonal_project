@@ -1,0 +1,32 @@
+a[href="about_me.html"] {
+  border-radius: 0.25em;
+  background-color: #1a388c30;
+}
+
+main {
+  background-color: #C7F2FF;
+}
+
+
+
+.about_me {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+
+}
+
+.about_me>h2 {
+  text-align: center;
+}
+
+.about_me>p {
+  white-space: pre-line;
+}
+
+
+/* ======================== */
+.cover_under_page {
+  background-color: #C7F2FF;
+}

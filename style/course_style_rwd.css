@@ -1,0 +1,144 @@
+a[href="course_page.html"] {
+  border-radius: 0.25em;
+  background-color: #1a388c30;
+}
+
+.course {
+  background-color: var(--course_color);
+  padding-top: 10px;
+}
+
+
+.card {
+  background: #fff6;
+  height: calc(100% - 10px);
+  padding: 10px;
+  border-radius: .25em;
+  position: relative;
+}
+
+.pic>img {
+  width: 100%;
+  box-shadow: 2px 2px 2px 0px #000c;
+  transition: .5s;
+}
+.pic>img:hover{
+  transform: scale(1.05);
+  box-shadow: 4px 4px 4px 2px #0009;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.text>div {
+  margin-bottom: 3px;
+}
+
+.course_info {
+  display: flex;
+
+}
+
+.course_people {
+  flex-grow: .5;
+}
+
+.course_item {
+  flex-grow: 1;
+}
+
+
+.course h2 {
+  margin-top: .5rem; 
+  line-height: 2;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.course_introduce{
+  text-indent: 1.2em;
+  padding:1em 0;
+}
+.course .for_beginner{
+  text-align: center;
+  margin: 10px;
+}
+.for_beginner span{
+  outline: 2px blue solid;
+  padding: 2px 4px;
+  border-radius:5px;
+}
+.course_money{
+  text-align: right;
+  font-size: 1.15em;
+  font-weight: 400;
+}
+.about_others * {
+  vertical-align: middle;
+}
+
+
+
+@media screen and (min-width:768px) {
+  .text h2 {
+    font-size: 1.5rem;
+  }
+
+  .text :not(h2) {
+    font-size: 1.25rem;
+  }
+
+  .course_info div {
+    font-size: 1rem;
+  }
+}
+
+
+/* card裝飾 */
+.out_ribbon {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: -7px;
+  left: -7px;
+  overflow: hidden;
+}
+
+.ribbon {
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  left: -30px;
+  top: 15px;
+  background: #f00;
+  transform: rotate(-45deg);
+}
+
+.out_ribbon::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  border-bottom: 7px solid black;
+  border-left: 7px solid #fff0;
+  position: absolute;
+  left: 47px;
+}
+
+.out_ribbon::after {
+  content: "";
+  height: 0px;
+  width: 0px;
+  border-bottom: 7px solid #000;
+  border-left: 7px solid #fff0;
+  position: absolute;
+  top: 47px;
+}
+
+/* ============================== */
+.cover_under_page {
+  background-color: var(--course_color);
+}

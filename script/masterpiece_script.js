@@ -78,6 +78,8 @@ function change_card(e) {
   cover_you_know.insertBefore(c, you_know[0]);
   // 更改圖片
   card_pic[1].src = masterpiece_member.src;
+  card_pic[1].alt = masterpiece_member.alt;
+  // 更改說明文
   if (masterpiece_member.introduce.length == 2) {
     text[1].innerHTML = `<h2>${masterpiece_member.alt}</h2>
   <p>${masterpiece_member.introduce[0]

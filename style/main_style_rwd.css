@@ -101,6 +101,7 @@ a {
     align-items: center;
     --r: 100px;
     background-color: #fff7;
+
   }
 
   .hamburger>div {
@@ -133,22 +134,22 @@ a {
 
   .cover_other_page {
     position: fixed;
-    z-index: -10;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #cccf;
+    background-color: #fff0;
     visibility: hidden;
     transition: .5s;
-    /* display: none; */
   }
 
   .cover_other_page.appear {
     z-index: 10;
     visibility: visible;
-    background-color: #cccc;
-    /* display: block; */
+    background-color: #fffa;
+    backdrop-filter: blur(5px);
+
   }
 
   .gotoLeft {
