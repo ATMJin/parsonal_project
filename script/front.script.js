@@ -134,11 +134,14 @@ function change_small_flower_timer() {
   }
 }
 
+setTimeout(function () {
+  $(".logo_flower_animation").style.display = "none"
+}, 5500)
 
 window.addEventListener("load", function () {
   // 輪播按鈕
-  document.getElementsByClassName("pre_pic")[0].addEventListener("click", pre_pic, false);
-  document.getElementsByClassName("next_pic")[0].addEventListener("click", next_pic, false);
+  $(".pre_pic").addEventListener("click", next_pic, false);
+  $(".next_pic").addEventListener("click", pre_pic, false);
   // 大花輪播
   let big_flower_petal = document.getElementsByClassName("big_flower_petal")
   for (let i = 0; i < big_flower_petal.length; i++) {
