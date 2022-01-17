@@ -54,6 +54,7 @@ main {
   overflow: hidden;
   padding-bottom: 15px;
   letter-spacing: 0.2em;
+  text-shadow: 1px 1px 2px #fff3;
 }
 
 .card>.pic {

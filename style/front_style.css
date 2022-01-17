@@ -152,6 +152,7 @@ p {
   transition: 1s;
   left: 0;
   right: 0;
+  white-space: pre-line;
 }
 
 .course_introduce_words h3 {
@@ -552,7 +553,7 @@ p {
 
   .flower_roulette>img:nth-child(4) {
     clip-path: var(--down_petal_bigger);
-    transform: translate(124.5px) rotate(60deg);
+    transform: translate(-124.5px) rotate(-60deg);
     transform-origin: top center;
   }
 
@@ -561,8 +562,9 @@ p {
   }
 
   .flower_roulette>img:nth-child(6) {
+
     clip-path: var(--down_petal_bigger);
-    transform: translate(-124.5px) rotate(-60deg);
+    transform: translate(124.5px) rotate(60deg);
     transform-origin: top center;
   }
 }
@@ -612,6 +614,13 @@ p {
   .skill_pic {
     margin-left: 10px;
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .course_image {
+    width: 70%;
+    max-width: 1200px;
   }
 }
 
